@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "./Home.css"
 const Home = () => {
   return (
     <div>
@@ -15,7 +16,7 @@ const Home = () => {
           </li>
         </ul>
       </nav>
-      <h1>home</h1>
+      
     </div>
   )
 }
