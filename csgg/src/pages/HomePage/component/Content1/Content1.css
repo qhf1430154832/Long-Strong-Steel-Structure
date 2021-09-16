@@ -1,0 +1,87 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+#title-p{
+    height: 28px;
+    font-family: Negreta;
+    font-weight: 1000;
+
+    font-size: 24px;
+    color: #333333;
+   display: table;
+   margin:0 auto;
+   margin-top:10px;
+   margin-bottom: 5px;
+}
+#title-e{
+    height: 27px;
+    font-weight: 1000;
+
+    font-family: Negreta;
+    color:#1C96CA;
+    font-size: 23px;
+    display: table;
+    margin: 0 auto;
+    
+}
+#jian-tou{
+    height: 26px;
+    width:26px;
+    display: table;
+    margin:0 auto;
+}
+#photo-show{
+    width:100%;
+    height:450px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+#photo-show div{
+    width:30%;
+    height:220px;
+    background-size: 100%;
+    border-radius: 2%;
+    margin-top:10px;
+    transition:  0.25s linear
+}
+#photo-show div:nth-child(1){
+    background: url(./photo/content1_pic1.b44c0005.png) no-repeat;
+   
+}
+#photo-show div:nth-child(2){
+    background: url(./photo/content1_pic2.4adb0335.png) no-repeat;
+    
+}
+#photo-show div:nth-child(3){
+    background: url(./photo/content1_pic3.f5399eb9.png) no-repeat;
+    
+}
+#photo-show div:nth-child(7){
+    background: url(./photo/content1_pic4.76a15592.png) no-repeat;
+    
+}
+#photo-show div:nth-child(8){
+    background: url(./photo/content1_pic5.42d9cfcf.png) no-repeat;
+    
+}
+#photo-show div:nth-child(9){
+    background: url(./photo/content1_pic6.49be3099.png) no-repeat;
+   
+}
+#photo-show div:hover{
+    transform: scale(1.1);
+    
+}
+#photo-show span{
+    width:26%;
+    text-align: center;
+    height: 21px;
+    font-size: 18px;
+    font-family: '黑体';
+    margin-top:20px;
+    margin-bottom:20px;
+}
+

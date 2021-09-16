@@ -1,0 +1,202 @@
+#warp{
+    margin-top: 100px;
+    width: 100%;
+    height: 520px;
+    background-color: #FFFFFF;
+    
+    
+    }
+    #item1{
+        display: flex;
+        
+        width: 100%;
+        height:80px ;
+        margin-bottom: 10px;
+        align-items: flex-end;
+        justify-content: space-evenly;
+       
+      
+        
+    }
+    .top{
+        height: 30px;
+        
+        width: 30%;
+        display: flex;
+        
+        justify-content: space-between;
+       
+    }
+    
+    #item2{
+        display: flex;
+        
+        width: 100%;
+        height: 220px;
+        justify-content: space-evenly;
+    }
+    #item3{
+        display: flex;
+        margin-top: 10px;
+        width: 100%;
+        height: 220px;
+        justify-content: space-evenly;
+        
+    }
+    .font1{
+        font-size:24px;
+        font-weight: bold;
+        font-family: Arial;
+        color: #333333;
+        
+        
+    }
+    .font2{
+        align-items: flex-end;
+        
+        font-size: 18px;
+       
+        font-family: Arial;
+        display: flex;
+        color: #169BD5;
+    }
+    #content1{
+        width: 30%;
+        height: 100%;
+        background-image: url('../../../../assets/u=415525584\,1878674214&fm=253&fmt=auto&app=120&f=JPEG.webp');
+        background-size: 100% 100%;
+        border-radius: 2%;
+        transition:  0.25s linear ;
+       
+    }
+    #content2{
+        width: 30%;
+        height: 100%;
+        background-image: url('../../../../assets/src=http___www.5131w.com_file_upload_201705_02_2115031954495.jpg&refer=http___www.5131w.jpg');
+        background-size: 100%;
+        border-radius:2%;
+        border: 1px #BCBCBB solid;
+        transition:  0.25s linear ;
+    }
+    #content3{
+        width: 30%;
+        height: 100%;
+        background-image: url('../../../../assets/src=http___i03.c.aliimg.com_img_ibank_2015_677_420_1945024776_1654222019.jpg&refer=http___i03.c.aliimg.jpg');
+        background-size: 100% 100%;
+        border-radius: 2%;
+        border: 1px #BCBCBB solid;
+        background-repeat:repeat-y ;
+        transition:  0.25s linear ;
+    }
+    #trend{
+        width: 30%;
+        text-decoration: none;
+        color: #333333;
+    }
+    
+    #bot1{
+        width: 100%;
+        height: 100%;
+        
+        
+    }
+    #bot2{
+        width: 100%;
+        height: 100%;
+       
+    }
+    #bot3{
+        width: 100%;
+        height: 100%;
+        
+    }
+    .ifm{
+        width: 100%;
+        height: 25%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: Arial;
+        font-size: 16px;
+       
+    }
+    .xx{
+        height: 100%;
+       display: flex;
+       align-items: center;
+       font-family: Arial;
+       font-size: 16px;
+       
+    }
+    .rq{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        font-family: Arial;
+        font-size: 16px;
+        
+    }
+    #cmp{
+        width: 100%;
+        font-size: 16px;
+        font-family: Arial;
+        color: #333333;
+        font-weight: bold;
+       height: 20%;
+       display: flex;
+       align-items: center;
+    }
+    .cot{
+        width: 100%;
+        font-size: 16px;
+        font-family: Arial;
+        height: 20%;
+       display: flex;
+       align-items: center;
+    }
+    #email{
+        width: 100%;
+        height: 20%;
+       display: flex;
+       align-items: center;
+       font-size: 16px;
+       font-family: Arial;
+    }
+    #address{
+        width: 100%;
+        height: 20%;
+       display: flex;
+       align-items: center;
+       font-size: 16px;
+       font-family: Arial;
+    }
+    #content1:hover{
+        transform: scale(1.1);
+    }
+    #content2:hover{
+        transform: scale(1.1);
+    }
+    #content3:hover{
+        transform: scale(1.1);
+    }
+    .font1:hover{
+        color: #169BD5;
+    }
+    .ifm:hover{
+        color: #169BD5;
+    }
+    .cot:hover{
+        color: #169BD5;
+    }
+    #address:hover{
+        color: #169BD5;
+    }
+    #email:hover{
+        color: #169BD5;
+    }
+    #trend2{
+      text-decoration: none;
+      color: #333333;
+      width: 30%;
+    }
+    

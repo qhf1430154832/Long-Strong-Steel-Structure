@@ -1,0 +1,34 @@
+#content_shell{
+    width:800px;
+    height:900px;
+    display: flex;
+    flex-direction: column;
+}
+.title_h3{
+    font-weight: 1000;
+}
+.right_title{
+    width:800px;
+    height:100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.right_content{
+    width:800px;
+    height:500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#__Contactsymbolstyle__{
+    align-items: flex-start !important
+
+}
+.Contact_p{
+    line-height: 40px;
+    padding-left: 300px;
+}
+#__first-Contact_p__{
+    margin-top: 80px;
+}

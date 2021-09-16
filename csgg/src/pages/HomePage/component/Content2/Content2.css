@@ -1,0 +1,95 @@
+#introduction_head {
+    display: flex;
+    flex-direction: column;
+    /*规定使用字体，不过这个字体好像不管用*/
+    font-family: Negreta;
+}
+
+#black_font {
+    margin: 0 auto;
+    font-weight: 1000;
+    font-size: 24px;
+    color: #333333;
+}
+
+#blue_font {
+    margin: 0 auto;
+    font-weight: 600;
+    font-size: 20px;
+    color: #1C96CA;
+    padding-top: 16px;
+    font-family: Negreta;
+
+}
+
+#introduction_head img {
+    width: 30px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+#introduction_part {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+#introduction_part img {
+    width: 437px;
+    height: 268px;
+    margin-right: 130px;
+    border-radius: 5px;
+    transition:  0.25s linear ;
+}
+
+#int_button_part {
+    text-indent: 2em;
+    font-size: 13px;
+    font-family: '黑体';
+    width: 460px;
+    padding-left: 50px;
+    padding-top: 20px;
+}
+
+.breath {
+    width: 460px;
+    height: 37px;
+    background-color: #169BD5;
+    border: medium;
+    border-radius: 6px;
+    color: #FFFFFF;
+    font-size: 13px;
+    margin-top: 30px;
+}
+
+
+/*动画*/
+
+.animation {
+    /*规定绑定选择器名称是breath*/
+    animation-name: breath;
+    /*规定动画时间*/
+    animation-duration: 1s;
+    /*规定动画开始前的延迟时间*/
+    animation-delay: 0ms;
+    /*规定播放次数；infinite表示一直播放*/
+    animation-iteration-count: infinite;
+    /*规定动画的加速度*/
+    animation-timing-function: linear;
+    /*规定是否反向播放*/
+    animation-direction: alternate;
+    /*规定动画暂停*/
+    animation-play-state: running;
+}
+
+@keyframes breath {
+    /*设置原始状态为标准1*/
+    0% {
+        transform: scale(1);
+    }
+    /*规定呼吸的最终状态为变化到原来的倍数*/
+    100% {
+        transform: scale(1.10);
+    }
+}
