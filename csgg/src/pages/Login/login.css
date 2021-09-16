@@ -1,0 +1,43 @@
+.login-form{
+    position: relative;
+    width: 500px;
+   height: 500px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 20px;
+    background-color: #EEF6FE;
+
+    
+}
+.warp{
+    width: 100%;
+    height: 100%;
+    
+}
+.but-back{
+    margin-top: 50px;
+    margin-left: 40px;
+    
+}
+.form-item-one{
+margin-top: 50px;
+}
+.form-item-two{
+    margin-top: 50px;
+    
+}
+.ant-input{
+    height: 40px;
+}
+.login-form-button{
+    margin-left: 160px;
+    margin-top: 50px;
+    width: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
