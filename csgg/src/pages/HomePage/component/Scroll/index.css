@@ -1,0 +1,36 @@
+.warp{
+    width:1200px;
+    height:238px;
+    margin:100px auto;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.images_list{
+    box-sizing: border-box;
+    width:2400px;
+    height:238px;
+    animation-name: move;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+img {
+    box-sizing: border-box;
+    float: left;
+    width: 240px;
+   padding: 5px;
+    height: 238px;
+}
+.images_list:hover{
+    cursor:pointer;
+    animation-play-state: paused;
+}
+
+@keyframes move{
+    from{
+        transform:translate(0px);
+    }
+    to{
+        transform:translate(-1200px);
+    }
+}
