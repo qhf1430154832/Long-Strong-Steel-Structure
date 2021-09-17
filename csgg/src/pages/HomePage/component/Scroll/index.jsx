@@ -13,7 +13,7 @@ import p10 from './pictures/p10钢构dalou.jpg'
 
 export default function Pic() {
     return (
-        <div class="warp">
+        <div class="window">
 
          <div class="images_list">
             
