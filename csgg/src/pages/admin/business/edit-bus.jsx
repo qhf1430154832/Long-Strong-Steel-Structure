@@ -13,7 +13,6 @@ import {serverUrl1} from '../../../utils/config'
     
    const  handleSubmit =(values)  => {
        
-      
         createApi1({content:values.content
           
           ,url:values.url.file.response.data.url}).then(res=>{
@@ -41,6 +40,7 @@ import {serverUrl1} from '../../../utils/config'
         }
         if (info.file.status === "done") {
           // 上传成功
+          console.log(info.file.response.data);
           setImageUrl(info.file.response.data);
          console.log('true')
         }
@@ -81,6 +81,7 @@ import {serverUrl1} from '../../../utils/config'
             )}
           </Upload>
                   </Form.Item>
+                  
                    
               
 

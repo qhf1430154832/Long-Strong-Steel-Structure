@@ -1,9 +1,24 @@
-import React, { Component } from 'react'
+import React, { useState,useEffect} from 'react'
 import { Row, Col, Card, Statistic } from "antd";
-export class Index extends Component {
-    render() {
-        return (
-            <div>
+import 'axios'
+import axios from 'axios';
+
+
+
+export default function Index() {
+   const [data,setData]=useState([]);
+   useEffect(()=>{
+       axios.get(`8.142.10.159:8001/changshi/numvisitors/getByDate/${20210915}`).then((res)=>{
+         console.log(res);
+         console.log(123);
+       }).catch(rea=>{
+         console.log(rea);
+         console.log(123);
+       })
+   },[])
+  return (
+    <div>
+         <div>
       <Card title="数据汇总" bordered={false}>
         <Row gutter={8}>
           <Col span={8}>
@@ -29,8 +44,6 @@ export class Index extends Component {
       </Card>
       <Card title="其他统计" bordered={false}></Card>
     </div>
-        )
-    }
+    </div>
+  )
 }
-
-export default Index

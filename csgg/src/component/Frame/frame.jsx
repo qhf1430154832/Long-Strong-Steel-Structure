@@ -61,6 +61,7 @@ export class Frame extends Component {
             padding: 24,
             margin: 0,
             minHeight: 280,
+          
           }}
         >
      {this.props.children}
