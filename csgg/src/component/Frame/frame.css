@@ -1,4 +1,4 @@
-@media screen and (min-width:450px) {
+ 
     
 
 .header{
@@ -11,7 +11,7 @@
 img{
     height: 100px;
 }
-}
+
 @media screen and (max-width:450px){
 
   .ant-layout-sider ant-layout-sider-dark site-layout-background{
@@ -22,9 +22,7 @@ img{
   img{
       height: 100px;
   }
-  .ant-layout-sider-children{
-      margin-top: 20px;
-  }
+ 
   .ant-layout{
       width: 1200px;
   }

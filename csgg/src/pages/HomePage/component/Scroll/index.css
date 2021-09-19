@@ -1,25 +1,25 @@
 .window{
     width:1200px;
-    height:238px;
+    height:240px;
     margin:100px auto;
     overflow: hidden;
-    box-sizing: border-box;
+   
 }
 .images_list{
-    box-sizing: border-box;
-    width:2400px;
-    height:238px;
+   
+    width:6000px;
+    height:240px;
     animation-name: move;
-    animation-duration: 15s;
+    animation-duration: 40s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
-img {
+.images_list_img{
     box-sizing: border-box;
     float: left;
-    width: 240px;
-   padding: 5px;
-    height: 238px;
+    width: 300px;
+    padding: 5px;
+    height: 240px;
 }
 .images_list:hover{
     cursor:pointer;
@@ -31,6 +31,6 @@ img {
         transform:translate(0px);
     }
     to{
-        transform:translate(-1200px);
+        transform:translate(-4800px);
     }
 }

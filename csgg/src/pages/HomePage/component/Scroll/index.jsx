@@ -14,20 +14,30 @@ import p10 from './pictures/p10钢构dalou.jpg'
 export default function Pic() {
     return (
         <div class="window">
-
          <div class="images_list">
+            <img src={p1} alt="" className='images_list_img' />
+            <img src={p2} alt="" className='images_list_img' />
+            <img src={p3} alt="" className='images_list_img' />
+            <img src={p4} alt="" className='images_list_img' />
+            <img src={p5} alt="" className='images_list_img' />
+            <img src={p6} alt="" className='images_list_img' />
+            <img src={p7} alt="" className='images_list_img' />
+            <img src={p8} alt="" className='images_list_img' />
+            <img src={p9} alt=""className='images_list_img' />
+            <img src={p10} alt=""className='images_list_img' />
+            <img src={p1} alt="" className='images_list_img' />
+            <img src={p2} alt="" className='images_list_img' />
+            <img src={p3} alt="" className='images_list_img' />
+            <img src={p4} alt="" className='images_list_img' />
+            <img src={p5} alt="" className='images_list_img' />
+            <img src={p6} alt="" className='images_list_img' />
+            <img src={p7} alt="" className='images_list_img' />
+            <img src={p8} alt="" className='images_list_img' />
+            <img src={p9} alt=""className='images_list_img' />
+            <img src={p10} alt=""className='images_list_img' />
             
-            <img src={p1} alt=""/>
-            <img src={p2} alt=""/>
-            <img src={p3} alt=""/>
-            <img src={p4} alt=""/>
-            <img src={p5} alt=""/>
-            <img src={p6} alt=""/>
-            <img src={p7} alt=""/>
-            <img src={p8} alt=""/>
-            <img src={p9} alt=""/>
-            <img src={p10} alt=""/>
-          
+            
+            
         </div>
     
     </div>

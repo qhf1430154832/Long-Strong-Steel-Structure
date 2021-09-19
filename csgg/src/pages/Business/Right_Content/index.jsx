@@ -6,8 +6,9 @@ export default class Right_Content extends Component {
         business:[]
     }
     componentDidMount(){
-        axios.get('http://8.142.10.159:8001/changshi/business/findAll').then(
+        axios.get('http://8.142.10.159:8001/changshi/project/findAllProjects').then(
             res=>{
+                console.log(res);
                 console.log(res.data.data.items)
                 this.setState({business:res.data.data.items})
             },
