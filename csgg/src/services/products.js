@@ -5,7 +5,7 @@ import { get, post, put, del } from "../utils/request";
  * @param {*} page
  */
 export function listApi(current,limit,url) {
-  return get('/projects/findAllProjects', { current, limit});
+  return get('/project/findParentProjects', { current, limit});
 }
 export function listApi1(current,limit,url) {
   return get('/business/findAll', { current, limit});
@@ -19,7 +19,7 @@ export function listApi2(current,limit,url) {
  * @param {*} data
  */
 export function createApi(data) {
-  return post("/projects/createProjects", data);
+  return post("/project/addParentProject", data);
 }
 export function createApi1(data) {
   return post("/business/createBusiness", data);
@@ -38,7 +38,7 @@ export function createApi2(data) {
  * @param {*} data
  */
 export function delOne(id, data) {
-  return del(`/projects/deleteProjectById/${id}`);
+  return del(`/project/deleteByPid/${id}`);
 }
 
 export function delOne1(id, data) {

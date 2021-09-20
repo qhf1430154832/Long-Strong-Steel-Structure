@@ -9,8 +9,9 @@ export default class Right_Content extends Component {
     }
     // 初次网络请求
     componentDidMount(){
-        axios.get(`http://8.142.10.159:8001/changshi/projects/pageProjects/1/6`).then(
+        axios.get(`http://8.142.10.159:8001/changshi/project/pageQuery/1/6`).then(
             res=>{
+             
                 this.setState({contents:res.data.data.row})
             },
             err=>{
@@ -21,8 +22,9 @@ export default class Right_Content extends Component {
     
     // 网络请求图片和内容
     pageChange=(event)=>{
-        axios.get(`http://8.142.10.159:8001/changshi/projects/pageProjects/${event}/6`).then(
+        axios.get(`http://8.142.10.159:8001/changshi/project/pageQuery/${event}/6`).then(
             res=>{
+               
                 this.setState({contents:res.data.data.row})
             },
             err=>{

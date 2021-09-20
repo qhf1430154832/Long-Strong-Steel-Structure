@@ -14,7 +14,7 @@ function List (props) {
       
         listApi().then(res=>{
              console.log(res)
-             setDataSource(res.data.allProjects)
+             setDataSource(res.data.parentProjects)
             
         }).catch(err=>{
             console.log(err)
@@ -29,11 +29,11 @@ function List (props) {
         ,render:(txt,record,index)=>index+1
     },{
         title:'标题',
-        dataIndex:'content'
+        dataIndex:'title'
     },
     {
         title:'内容',
-        dataIndex:'name'
+        dataIndex:'comment'
     },
     {
         title:'图片资源',
@@ -66,8 +66,8 @@ function List (props) {
                             delOne (props.id).then(res => {
                            console.log(res)
                            listApi().then(res=>{
-          
-                          setDataSource(res.data.allProjects)
+                        
+                          setDataSource(res.data.parentProjects)
           
                        }).catch(err=>{
                           console.log(err)

@@ -1,20 +1,14 @@
 import React , { useState }from 'react'
 import {Card,Input,Button,Form,Upload} from 'antd'
-import { createApi ,listApi} from '../../../services/products'
+import { createApi } from '../../../services/products'
 import {serverUrl} from '../../../utils/config'
  function Edit (props) {
-    console.log(props)
-    
+  
     const  handleSubmit =(values)  => {
-      // editorState.toHTML()获取当前富文本的内容
-      // console.log(editorState.toHTML());
-      
-    
-     
       console.log('Received values of form: ', values)
-      createApi({content:values.content
+      createApi({comment:values.comment
         
-        ,url:values.url.file.response.data.url,name:values.name}).then(res=>{
+        ,url:values.url.file.response.data.url,title:values.tit}).then(res=>{
           
           props.history.push('/admin/products/list')
       }).catch(err=>{
@@ -33,15 +27,13 @@ import {serverUrl} from '../../../utils/config'
       );
       const handleChange = info => {
         if (info.file.status === "uploading") {
-           
-          
-        
+           console.log(info);
           console.log('false')
           return;
         }
         if (info.file.status === "done") {
           // 上传成功
-          // Get this url from response in real world.
+     
          
          
           
@@ -56,7 +48,7 @@ import {serverUrl} from '../../../utils/config'
           <Card title='工程实例编辑' bordered>
                 <Form onFinish={(e)=>handleSubmit(e)} scrollToFirstError >
         
-                    <Form.Item label='工程名称' name={'content'}   rules={[
+                    <Form.Item label='工程名称' name={'tit'}   rules={[
                                 {
                                     required: true,
                                     message: '请填写工程名字!'
@@ -65,7 +57,7 @@ import {serverUrl} from '../../../utils/config'
                   
          <Input placeholder="请填写工程名字" />
                     </Form.Item>
-                    <Form.Item label='工程内容' name={'name'}   rules={[
+                    <Form.Item label='工程内容' name={'comment'}   rules={[
                                 {
                                     required: true,
                                     message: '请填工程内容!'
