@@ -2,48 +2,41 @@ import React , { useState }from 'react'
 import {Card,Input,Button,Form,Upload} from 'antd'
 import { createApi } from '../../../services/products'
 import {serverUrl} from '../../../utils/config'
+import { PlusOutlined } from '@ant-design/icons';
  function Edit (props) {
-  
-    const  handleSubmit =(values)  => {
-      console.log('Received values of form: ', values)
-      createApi({comment:values.comment
-        
-        ,url:values.url.file.response.data.url,title:values.tit}).then(res=>{
-          
-          props.history.push('/admin/products/list')
-      }).catch(err=>{
-          console.log(err);
-      })
-      
-  }
-    //  上传功能
-    const [imageUrl, setImageUrl] = useState("");
-   
-    const uploadButton = (
-        <div>
-     
-          <div className="ant-upload-text">Upload</div>
-        </div>
-      );
-      const handleChange = info => {
-        if (info.file.status === "uploading") {
-           console.log(info);
-          console.log('false')
-          return;
-        }
-        if (info.file.status === "done") {
-          // 上传成功
-     
-         
-         
-          
-          setImageUrl(info.file.response.data);
-          
-         console.log('true')
-        }
-      };
-   
-  
+  const  handleSubmit =(values)  => {
+     console.log(values);
+    const ul=values.url.fileList.map((item)=>{
+     return item.response.data.url } )
+  const Url=ul.toString().split(",")
+
+   console.log(Url);
+       createApi({title:values.tit,comment:values.comment,url:Url
+         }).then(res=>{    
+           props.history.push('/admin/products/list')
+       }).catch(err=>{
+           console.log(err);
+       })
+       
+   }
+   //  上传功能
+const [fileList,setFileList]=useState([])
+       
+//取消功能
+
+
+//检测变化
+const handleChange = ( {fileList} ) =>{
+  setFileList( fileList )
+ console.log(fileList );
+};
+//组件
+const uploadButton = (
+  <div>
+    <PlusOutlined />
+    <div style={{ marginTop: 8 }}>Upload</div>
+  </div>
+);
         return (
           <Card title='工程实例编辑' bordered>
                 <Form onFinish={(e)=>handleSubmit(e)} scrollToFirstError >
@@ -68,24 +61,15 @@ import {serverUrl} from '../../../utils/config'
                     </Form.Item>
 
                     <Form.Item label='图片' name={'url'}>
-                  <Upload
-            name="file"
-            listType="picture-card"
-            className="avatar-uploader"
-            showUploadList={false}
-            action={serverUrl}
-            onChange={info => handleChange(info)}
-          >
-            {imageUrl ? (
-              <img
-                src={imageUrl.url}
-                alt="avatar"
-                style={{ width: "100%" }} 
-              />
-            ) : (
-              uploadButton
-            )}
-          </Upload>
+                    <Upload
+          action={serverUrl}
+          listType="picture-card"
+          fileList={fileList}
+          onChange={handleChange}
+        >    
+          {fileList.length >= 5 ? null : uploadButton}
+        </Upload>
+          
                   </Form.Item>
                   
                     <Form.Item>
