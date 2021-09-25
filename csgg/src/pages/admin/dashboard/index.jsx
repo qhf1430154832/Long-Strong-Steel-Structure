@@ -6,14 +6,21 @@ import axios from 'axios';
 
 
 export default function Index() {
-   const [data,setData]=useState([]);
+   const [dayData,setDayData]=useState([]);
+   const [weekData,setWeekData]=useState([])
    useEffect(()=>{
-       axios.get(`8.142.10.159:8001/changshi/numvisitors/getByDate/${20210915}`).then((res)=>{
-         console.log(res);
-         console.log(123);
+       axios.get(`http://8.142.10.159:8001/changshi/numvisitors/getCurrent`).then((res)=>{
+
+        setDayData(res.data.data.num)
+      
        }).catch(rea=>{
          console.log(rea);
-         console.log(123);
+         
+       })
+       axios.get("http://8.142.10.159:8001/changshi/numvisitors/getWeekVis").then(res=>{
+        setWeekData(res.data.data.week_num)
+       }).catch(rea=>{
+         console.log(rea);
        })
    },[])
   return (
@@ -22,19 +29,19 @@ export default function Index() {
       <Card title="数据汇总" bordered={false}>
         <Row gutter={8}>
           <Col span={8}>
-            <Card title="新增用户" color="red">
+            <Card title="今日访问量" color="red">
               <Statistic
-                title="新增用户"
-                value="80"
+                title="今日访问量"
+                value={dayData}
                
               ></Statistic>
             </Card>
           </Col>
           <Col span={16}>
-            <Card title="总用户">
+            <Card title="该周访问量">
               <Statistic
-                title="总用户"
-                value="840"
+                title="该周访问量"
+                value={weekData}
              
               ></Statistic>
             </Card>
@@ -42,7 +49,7 @@ export default function Index() {
         
         </Row>
       </Card>
-      <Card title="其他统计" bordered={false}></Card>
+     
     </div>
     </div>
   )

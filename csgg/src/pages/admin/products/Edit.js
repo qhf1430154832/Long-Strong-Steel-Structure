@@ -3,6 +3,7 @@ import {Card,Input,Button,Form,Upload} from 'antd'
 import { createApi } from '../../../services/products'
 import {serverUrl} from '../../../utils/config'
 import { PlusOutlined } from '@ant-design/icons';
+import axios from 'axios';
  function Edit (props) {
   const  handleSubmit =(values)  => {
      console.log(values);
@@ -16,6 +17,9 @@ import { PlusOutlined } from '@ant-design/icons';
            props.history.push('/admin/products/list')
        }).catch(err=>{
            console.log(err);
+       })
+       axios.get(`http://8.142.10.159:8001/changshi/project/findProjectById/${"32ff8c5a24934dfcaa8990f32a6e748f"}`).then(res=>{
+         console.log(res);
        })
        
    }
