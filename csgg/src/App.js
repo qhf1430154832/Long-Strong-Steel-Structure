@@ -6,7 +6,7 @@ import Company_Profile from './pages/Company_Profile'
 import Trends from './pages/Trends'
 import Business from './pages/Business'
 import Contact from './pages/Contact'
-import MySwiper from './component/Swiper'
+
 import Head from './component/Head'
 import Footer from './component/Footer/index'
 import './App.less'
@@ -18,7 +18,7 @@ export default class App extends Component {
             <div>
                 <Head/>
                 {/* Swiper */}
-                <MySwiper/>
+              
                 {/* 组件展示区 */}
                 <Switch>
                     {/* 路由注册 */}

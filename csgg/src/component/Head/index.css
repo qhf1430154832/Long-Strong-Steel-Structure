@@ -1,55 +1,76 @@
-#head_background{
-    width:100%;
-    height:80px;
-    position:fixed;
-    background-color: #333;
-    opacity: 0.8;
-    z-index: 10;
+html,
+body {
+  height: 100%;
 }
 
-header{
-    width:100%;
-    height:80px;
-    position:fixed;
-    z-index: 10;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+.home-header {
+  background: #ffffff;
+  position: relative;
+  margin: 0px;
+  padding: 0px;
 }
-#left_logo{
-    margin-left:60px;
-    display: inline-flex;
+.home-logo {
+  position: absolute;
+  height: 136px;
+  width: 134px;
+  left: 181px;
+  top: 23px;
+  background: url(./img/logo.png);
 }
-#logo{
-    width:78px;
-    height:80px;
-    top:0;
-    margin-right: 35px;
 
-   
+.home-search {
+  position: absolute;
+  height: 36px;
+  width: 347px;
+  left: 1340px;
+  top: 79px;
+  border-radius: 3px;
+  background: rgba(196, 196, 196, 0.5);
+  border-radius: 3px;
 }
-#title{
-    color:white;
-    font-size: 28px;
-    font-weight: bold;
-    line-height: 80px;
+.home-name {
+  position: absolute;
+  height: 45px;
+  width: 438px;
+  left: 322px;
+  top: 74px;
+  font-family: Signika SC;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 44px;
+  color: #000000;
+  mix-blend-mode: darken;
 }
-#links{
-    width:800px;
-    height:100%;
-    display: inline-flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-right:40px
+.home-menu {
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  height: 83px;
+  width: 1920px;
+  top: 150px;
+  align-items: center;
+  background: #2373c8;
 }
-.head_font{
-    font-size: 18px;
-    z-index: 10;
+.home-menu-item {
+  width: 203px;
+  height: 39px;
+  font-family: PingFang SC;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 34px;
+  text-align: center;
+  color: #ffffff;
 }
-.head_font>a:hover {
-    color:#1890ff
+
+.top_back4 {
+  position: absolute;
+  top: 233px;
+  width: 1920px;
+  height: 514px;
 }
-.head_font>a:link{
-    color:white;
+
+.ant-menu-item-selected {
+  background-color: #2373c8 !important;
 }

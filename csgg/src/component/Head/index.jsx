@@ -1,29 +1,94 @@
 import React, { Component } from 'react'
-import {Link} from 'react-router-dom'
+import { Menu, Input, Carousel } from "antd";
+import { Link, withRouter } from "react-router-dom";
+import menuList from "./menuList";
+import top_back3 from "./img/banner1.png";
+import top_back4 from "./img/banner3.png";
 import './index.css'
 import logo from './img/logo.png'
-export default class Head extends Component {
-    // 顶部固定半透明导航栏
-    render() {
+const { Search } = Input;
+class Head extends React.Component {
+    onSearch = (value) => console.log(value);
+  
+    getMenuNodes = (menuList) => {
+      const path = this.props.location.pathname;
+  
+      return menuList.map((item) => {
         return (
-            <div>
-                <div id="head_background"></div>
-                    <header>
-                        <div id="left_logo">
-                            <img src={logo} alt="err" id="logo"/>
-                            <span id="title">重庆长实钢结构有限公司</span>
-                        </div>
-                        <div id="links">
-                            {/* 编写路由 */}
-                        <span className="head_font"><Link to="/HomePage">网站首页</Link></span>
-                        <span className="head_font"><Link to="/Engineering_Example">工程实例</Link></span>
-                        <span className="head_font"><Link to="/Company_Profile">公司简介</Link></span>
-                        <span className="head_font"><Link to="/Trends">公司动态</Link></span>
-                        <span className="head_font"><Link to="/Business">主营业务</Link></span>
-                        <span className="head_font"><Link to="/Contact">联系我们</Link></span>
-                        </div>
-                    </header>
-            </div>
-        )
+          <Menu.Item key={item.key} className="home-menu-item">
+            <Link
+              to={item.key}
+              onClick={() => this.props.history.push(item.key)}
+            ></Link>
+            <span>{item.title}</span>
+          </Menu.Item>
+        );
+      });
+    };
+  
+    UNSAFE_componentWillMount() {
+      this.menuNodes = this.getMenuNodes(menuList);
     }
-}
+    render() {
+      const path = this.props.location.pathname;
+      return (
+        // <div>
+        //   <header className="home-header">
+        //     <div className="home-logo"></div>
+        //     <div className="home-name">
+        //       <p>重庆长实钢结构有限公司</p>
+        //     </div>
+        //     <Search
+        //       className="home-search"
+        //       placeholder="input search text"
+        //       onSearch={this.onSearch}
+        //       enterButton
+        //     />
+        //   </header>
+  
+        //   <div className="logo" />
+  
+        // </div>
+        <div>
+          <header className="home-header">
+            <div>
+              <img src={logo} alt="" className="home-logo" />
+              <p className="home-name">重庆长实钢结构有限公司</p>
+              {/* <Search
+                className="home-search"
+                placeholder="input search text"
+                onSearch={this.onSearch}
+                enterButton
+              /> */}
+              <Search
+                placeholder="请输入搜索内容"
+                onSearch={this.onSearch}
+                className="home-search"
+              />
+            </div>
+            <Menu className="home-menu" SelectedKeys={[path]} theme="light">
+              {this.menuNodes}
+            </Menu>
+            <Carousel autoplay className="top_back4">
+              <div>
+                <img
+                  src={top_back4}
+                  alt=""
+                  style={{ height: 514, width: 1920 }}
+                />
+              </div>
+              <div>
+                <img
+                  src={top_back3}
+                  alt=""
+                  style={{ height: 514, width: 1920 }}
+                />
+              </div>
+            </Carousel>
+          </header>
+        </div>
+      );
+    }
+  }
+  
+  export default withRouter(Head);

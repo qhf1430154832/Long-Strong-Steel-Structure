@@ -71,7 +71,7 @@ const uploadButton = (
           fileList={fileList}
           onChange={handleChange}
         >    
-          {fileList.length >= 5 ? null : uploadButton}
+          {fileList.length >= 7 ? null : uploadButton}
         </Upload>
           
                   </Form.Item>

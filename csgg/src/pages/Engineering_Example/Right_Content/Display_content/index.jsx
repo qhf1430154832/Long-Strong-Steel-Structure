@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './index.css'
 export default class Display_content extends Component {
     render() {
+        console.log("props",this.props);
         const {display_items} = this.props
         console.log(display_items)
         return (

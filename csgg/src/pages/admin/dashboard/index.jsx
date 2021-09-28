@@ -1,8 +1,8 @@
 import React, { useState,useEffect} from 'react'
-import { Row, Col, Card, Statistic } from "antd";
+import { Row, Col, Card, Statistic , Tabs} from "antd";
 import 'axios'
 import axios from 'axios';
-
+import {TabletTwoTone,StarTwoTone} from '@ant-design/icons';
 
 
 export default function Index() {
@@ -33,7 +33,7 @@ export default function Index() {
               <Statistic
                 title="今日访问量"
                 value={dayData}
-               
+                prefix={<TabletTwoTone />}
               ></Statistic>
             </Card>
           </Col>
@@ -42,7 +42,7 @@ export default function Index() {
               <Statistic
                 title="该周访问量"
                 value={weekData}
-             
+                 prefix={<StarTwoTone />}
               ></Statistic>
             </Card>
           </Col>
